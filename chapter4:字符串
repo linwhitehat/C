@@ -1,3 +1,21 @@
 /*keywords*/
+array:数组
+conversion specification:转换说明符
+character string:字符串
+null character:空字符
+blank:空白字符空格
+tab:制表符
+newline:换行符
 
 /*章节记录*/
+1.
+字符串用双引号表示内容，字符串以空字符\0作为结束标志，使用数组进行存储。
+
+2.
+scanf读取内容遇到第一个空白字符空格、制表符、换行符会停止读取。
+
+3.
+sizeof以字节为单位给出数据大小
+strlen以字符为单位给出字符串长度
+
+strlen会显示
