@@ -36,12 +36,14 @@ int类型，有符号整数，取值范围依赖于系统
 
 char类型，存储字母和标点符号的字符
 ASCII编码，标准ASCII码范围是0-127
-C把一个byte定义为char使用的位数，依据不同系统决定
+C把一个byte定义为char使用的位数，具体存储位数依据不同系统决定
 字符声明赋值，字符使用''单引号进行表示
 
 布尔类型，0与1
 
 **可移植的类型，inttypes.h
+Q：什么是可移植
+对于不同系统平台环境下，使用统一的类型定义，包括类型的大小
 
 float至少表示6位有效数字，取值范围至少10^-37到10^37
 double至少表示10位有效数字，取值范围至少10^-37到10^37
@@ -59,3 +61,18 @@ int,long,short,unsigned,char,float,double,signed,_Bool,_Complex,_Imaginary
 类型大小的判断，可以使用sizeof函数获得类型的大小，以字节为单位，例如sizeof(int)=4
 
 最小的整数类型是char，C的基本数据类型包括整数和浮点数
+
+典型系统下整数类型大小（bit）：
+type | Macintosh Metrowerks CW(默认) | PC linux | IBM PC机上Windows XP和Windows NT系统 | ANSI C规定的最小值
+char | 8 | 8 | 8 | 8
+int |32|32|32|16
+short |16|16|16|16
+long |32|32|32|32
+long long |64|64|64|64
+
+典型系统的浮点数情况（bit）：
+type | Macintosh Metrowerks CW(默认) | PC linux | IBM PC机上Windows XP和Windows NT系统 | ANSI C规定的最小值
+float | 6/-37:38 | 6/-37:38 | 6/-37:38 | 6/-37:38
+double | 18/-4931:4932 | 15/-307:308 | 15/-307:308 | 10/-37:37
+long double | 18/-4931:4932 | 18/-4931:4932 | 18/-4931:4932 | 10/-37:37
+ps:以上每种类型，/左边表示有效字位数，/右边表示指数范围（以10为基数）
