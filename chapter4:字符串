@@ -6,6 +6,11 @@ null character:空字符
 blank:空白字符空格
 tab:制表符
 newline:换行符
+compiletime substitution:编译时代入法
+manifest constant:明显常量
+enum:枚举
+control-string:控制字符串
+
 
 /*章节记录*/
 1.
